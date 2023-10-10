@@ -17,6 +17,7 @@
 		9F30C3CE2AD5D39C00E8E3D8 /* Premier_LeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3CD2AD5D39C00E8E3D8 /* Premier_LeagueTests.swift */; };
 		9F30C3D82AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D72AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift */; };
 		9F30C3DA2AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */; };
+		9F30C3E82AD5D69100E8E3D8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30C3E72AD5D69100E8E3D8 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30C3E82AD5D69100E8E3D8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,9 @@
 			dependencies = (
 			);
 			name = "Premier League";
+			packageProductDependencies = (
+				9F30C3E72AD5D69100E8E3D8 /* Alamofire */,
+			);
 			productName = "Premier League";
 			productReference = 9F30C3B02AD5D39900E8E3D8 /* Premier League.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 9F30C3A72AD5D39900E8E3D8;
+			packageReferences = (
+				9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9F30C3B12AD5D39900E8E3D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -606,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F30C3E72AD5D69100E8E3D8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9F30C3BC2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld */ = {
