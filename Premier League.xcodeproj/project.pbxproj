@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */; };
 		9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */; };
-		9F30C3B82AD5D39900E8E3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */; };
+		9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */; };
 		9F30C3BB2AD5D39900E8E3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C3B92AD5D39900E8E3D8 /* Main.storyboard */; };
 		9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3BC2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld */; };
 		9F30C3C02AD5D39B00E8E3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */; };
@@ -27,6 +27,7 @@
 		9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */; };
 		9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */; };
 		9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FC2AD5E71000E8E3D8 /* Season.swift */; };
+		9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,7 @@
 		9F30C3B02AD5D39900E8E3D8 /* Premier League.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier League.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F30C3BA2AD5D39900E8E3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F30C3BD2AD5D39900E8E3D8 /* Premier_League.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Premier_League.xcdatamodel; sourceTree = "<group>"; };
 		9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTime.swift; sourceTree = "<group>"; };
 		9F30C3FC2AD5E71000E8E3D8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +123,10 @@
 		9F30C3B22AD5D39900E8E3D8 /* Premier League */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C3FE2AD5E7E400E8E3D8 /* Modules */,
 				9F30C3EB2AD5E5B300E8E3D8 /* Models */,
 				9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */,
 				9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */,
-				9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */,
 				9F30C3B92AD5D39900E8E3D8 /* Main.storyboard */,
 				9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */,
 				9F30C3C12AD5D39B00E8E3D8 /* LaunchScreen.storyboard */,
@@ -173,6 +175,47 @@
 				9F30C3FC2AD5E71000E8E3D8 /* Season.swift */,
 			);
 			path = Match;
+			sourceTree = "<group>";
+		};
+		9F30C3FE2AD5E7E400E8E3D8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3FF2AD5E82E00E8E3D8 /* Matches */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F30C3FF2AD5E82E00E8E3D8 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4022AD5E87A00E8E3D8 /* ViewModel */,
+				9F30C4012AD5E87500E8E3D8 /* Model */,
+				9F30C4002AD5E85700E8E3D8 /* View */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		9F30C4002AD5E85700E8E3D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F30C4012AD5E87500E8E3D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F30C4022AD5E87A00E8E3D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,9 +356,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */,
+				9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */,
 				9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */,
 				9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */,
-				9F30C3B82AD5D39900E8E3D8 /* ViewController.swift in Sources */,
+				9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */,
 				9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */,
 				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
 				9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */,
