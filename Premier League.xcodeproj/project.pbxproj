@@ -28,6 +28,8 @@
 		9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */; };
 		9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FC2AD5E71000E8E3D8 /* Season.swift */; };
 		9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */; };
+		9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */; };
+		9F30C40B2AD5EAFB00E8E3D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTime.swift; sourceTree = "<group>"; };
 		9F30C3FC2AD5E71000E8E3D8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		9F30C3B22AD5D39900E8E3D8 /* Premier League */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C4052AD5E9F000E8E3D8 /* Services */,
 				9F30C3FE2AD5E7E400E8E3D8 /* Modules */,
 				9F30C3EB2AD5E5B300E8E3D8 /* Models */,
 				9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */,
@@ -216,6 +221,31 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F30C4052AD5E9F000E8E3D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4072AD5EA5F00E8E3D8 /* Caching */,
+				9F30C4062AD5EA5800E8E3D8 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F30C4062AD5EA5800E8E3D8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */,
+				9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F30C4072AD5EA5F00E8E3D8 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +389,7 @@
 				9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */,
 				9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */,
 				9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */,
+				9F30C40B2AD5EAFB00E8E3D8 /* NetworkManager.swift in Sources */,
 				9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */,
 				9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */,
 				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
@@ -368,6 +399,7 @@
 				9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */,
 				9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */,
 				9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */,
+				9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */,
 				9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
