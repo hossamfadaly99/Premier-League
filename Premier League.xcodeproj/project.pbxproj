@@ -18,6 +18,15 @@
 		9F30C3D82AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D72AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift */; };
 		9F30C3DA2AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */; };
 		9F30C3E82AD5D69100E8E3D8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30C3E72AD5D69100E8E3D8 /* Alamofire */; };
+		9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */; };
+		9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3ED2AD5E66700E8E3D8 /* Match.swift */; };
+		9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */; };
+		9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F22AD5E69F00E8E3D8 /* Area.swift */; };
+		9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */; };
+		9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */; };
+		9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */; };
+		9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */; };
+		9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FC2AD5E71000E8E3D8 /* Season.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +61,15 @@
 		9F30C3D32AD5D39C00E8E3D8 /* Premier LeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Premier LeagueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30C3D72AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_LeagueUITests.swift; sourceTree = "<group>"; };
 		9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_LeagueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
+		9F30C3ED2AD5E66700E8E3D8 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competition.swift; sourceTree = "<group>"; };
+		9F30C3F22AD5E69F00E8E3D8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Odds.swift; sourceTree = "<group>"; };
+		9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTime.swift; sourceTree = "<group>"; };
+		9F30C3FC2AD5E71000E8E3D8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +121,7 @@
 		9F30C3B22AD5D39900E8E3D8 /* Premier League */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C3EB2AD5E5B300E8E3D8 /* Models */,
 				9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */,
 				9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */,
 				9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */,
@@ -130,6 +149,30 @@
 				9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */,
 			);
 			path = "Premier LeagueUITests";
+			sourceTree = "<group>";
+		};
+		9F30C3EB2AD5E5B300E8E3D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3EC2AD5E5BA00E8E3D8 /* Match */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F30C3EC2AD5E5BA00E8E3D8 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */,
+				9F30C3ED2AD5E66700E8E3D8 /* Match.swift */,
+				9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */,
+				9F30C3F22AD5E69F00E8E3D8 /* Area.swift */,
+				9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */,
+				9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */,
+				9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */,
+				9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */,
+				9F30C3FC2AD5E71000E8E3D8 /* Season.swift */,
+			);
+			path = Match;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,10 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */,
+				9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */,
+				9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */,
 				9F30C3B82AD5D39900E8E3D8 /* ViewController.swift in Sources */,
 				9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */,
+				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
 				9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */,
+				9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */,
+				9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */,
+				9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */,
 				9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */,
+				9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */,
+				9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
