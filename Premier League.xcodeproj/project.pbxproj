@@ -31,6 +31,8 @@
 		9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */; };
 		9F30C40B2AD5EAFB00E8E3D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */; };
 		9F30C4102AD5F3E100E8E3D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */; };
+		9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */; };
+		9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 		9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */,
+				9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */,
+				9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				9F30C3C32AD5D39B00E8E3D8 /* LaunchScreen.storyboard in Resources */,
 				9F30C3C02AD5D39B00E8E3D8 /* Assets.xcassets in Resources */,
 				9F30C3BB2AD5D39900E8E3D8 /* Main.storyboard in Resources */,
+				9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +412,7 @@
 				9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */,
 				9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */,
 				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
+				9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */,
 				9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */,
 				9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */,
 				9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */,

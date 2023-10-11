@@ -15,9 +15,39 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJB-yj-ggb">
+                                <rect key="frame" x="142.66666666666666" y="67" width="108" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdF-83-maF">
+                                <rect key="frame" x="327" y="61.666666666666657" width="50" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle" catalog="system"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="i4E-Zm-b9j">
+                                <rect key="frame" x="0.0" y="104.66666666666669" width="393" height="713.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TdF-83-maF" firstAttribute="centerY" secondItem="lJB-yj-ggb" secondAttribute="centerY" id="37F-iC-EzB"/>
+                            <constraint firstItem="lJB-yj-ggb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4oX-bi-HgG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TdF-83-maF" secondAttribute="trailing" constant="16" id="6a7-zR-bum"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i4E-Zm-b9j" secondAttribute="trailing" id="Gla-G9-Tfj"/>
+                            <constraint firstItem="i4E-Zm-b9j" firstAttribute="top" secondItem="TdF-83-maF" secondAttribute="bottom" constant="8" id="dmC-IS-cCc"/>
+                            <constraint firstItem="lJB-yj-ggb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="kGe-hr-Ao1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i4E-Zm-b9j" secondAttribute="bottom" id="mRV-aq-ajE"/>
+                            <constraint firstItem="i4E-Zm-b9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yXZ-LN-s90"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="matchesTableView" destination="i4E-Zm-b9j" id="s9c-ga-asC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
