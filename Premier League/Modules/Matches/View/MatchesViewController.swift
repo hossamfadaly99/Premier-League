@@ -21,7 +21,8 @@ class MatchesViewController: UIViewController {
   }
 
   private func setupViewModel() {
-    viewModel = MatchViewModel(networkManager: NetworkManager())
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    viewModel = MatchViewModel(networkManager: NetworkManager(), dbManager: DBManager(managedContext: (appDelegate?.persistentContainer.viewContext)!))
     viewModel.updateViewController = { [weak self] in
       self?.matchesTableView.reloadData()
     }
@@ -31,6 +32,15 @@ class MatchesViewController: UIViewController {
     let matchCell = UINib(nibName: "MatchCell", bundle: nil)
     self.matchesTableView.register(matchCell, forCellReuseIdentifier: "MatchCell")
     self.matchesTableView.dataSource = self
+  }
+
+  private func toggleFavoriteValue(with match: MatchModel) {
+    if match.isFav {
+      viewModel.removeFavMatches(match: match)
+    } else {
+      viewModel.addMatchToFavorites(match: match)
+    }
+    viewModel.fetchMatches()
   }
 }
 
@@ -49,8 +59,11 @@ extension MatchesViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let matchCell = tableView.dequeueReusableCell(withIdentifier: "MatchCell") as! MatchCell
-    print(indexPath)
     matchCell.updateUI(match: viewModel.groupedMatches[indexPath.section][indexPath.row])
+
+    matchCell.dataHandler = { match in
+      self.toggleFavoriteValue(with: match)
+    }
     return matchCell
   }
 }

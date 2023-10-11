@@ -39,6 +39,9 @@
                                 <integer key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="favButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Sf-qQ-XPz"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upcoming or fulltime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDw-eW-fqU">
                         <rect key="frame" x="180.66666666666666" y="16" width="140.99999999999997" height="18"/>

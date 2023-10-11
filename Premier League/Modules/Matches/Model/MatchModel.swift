@@ -15,8 +15,9 @@ struct MatchModel {
   let info: String?
   let matchDay: String?
   let date: String?
-  private let homeScore: Int?
-  private let awayScore: Int?
+  let homeScore: Int?
+  let awayScore: Int?
+  var isFav: Bool = false
 
   init(match: Match) {
     self.id = match.id
@@ -34,4 +35,24 @@ struct MatchModel {
     self.awayTeam = match.awayTeam?.name
 
   }
+  init(
+    id: Int?,
+    status: String?,
+    homeTeam: String?,
+    awayTeam: String?,
+    info: String?,
+    matchDay: String?,
+    date: String?,
+    homeScore: Int?,
+    awayScore: Int?) {
+      self.id = id
+      self.status = status
+      self.homeTeam = homeTeam
+      self.awayTeam = awayTeam
+      self.info = info
+      self.matchDay = matchDay
+      self.date = date
+      self.homeScore = homeScore
+      self.awayScore = awayScore
+    }
 }
