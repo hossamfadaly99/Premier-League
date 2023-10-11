@@ -33,6 +33,8 @@
 		9F30C4102AD5F3E100E8E3D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */; };
 		9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */; };
 		9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */; };
+		9F30C4162AD6A0D500E8E3D8 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */; };
+		9F30C4182AD6A5DF00E8E3D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
+		9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 		9F30C4022AD5E87A00E8E3D8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */,
+				9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -417,9 +423,11 @@
 				9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */,
 				9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */,
 				9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */,
+				9F30C4162AD6A0D500E8E3D8 /* MatchViewModel.swift in Sources */,
 				9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */,
 				9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */,
 				9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */,
+				9F30C4182AD6A5DF00E8E3D8 /* Utilities.swift in Sources */,
 				9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

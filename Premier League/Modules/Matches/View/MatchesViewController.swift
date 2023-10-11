@@ -10,11 +10,21 @@ import UIKit
 class MatchesViewController: UIViewController {
 
   @IBOutlet weak var matchesTableView: UITableView!
+  var viewModel: MatchViewModel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
+    setupViewModel()
     setupTableView()
+    viewModel.fetchMatches()
+  }
+
+  private func setupViewModel() {
+    viewModel = MatchViewModel(networkManager: NetworkManager())
+    viewModel.updateViewController = { [weak self] in
+      self?.matchesTableView.reloadData()
+    }
   }
 
   private func setupTableView() {
@@ -26,14 +36,12 @@ class MatchesViewController: UIViewController {
 
 extension MatchesViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    3
+    viewModel.matches.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let matchCell = tableView.dequeueReusableCell(withIdentifier: "MatchCell") as! MatchCell
-
+    matchCell.updateUI(match: viewModel.matches[indexPath.row])
     return matchCell
   }
-
-
 }
