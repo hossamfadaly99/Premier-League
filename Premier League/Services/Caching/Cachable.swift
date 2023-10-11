@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Cachable {
-  func getFavoriteMatches() -> [MatchModel]
+  func getFavoriteMatches() -> [Int]
   func insertMatch(_ match: MatchModel)
-  func removeFavMatches(_ match: MatchModel)
+  func removeFavMatche(with id: Int32)
 }
