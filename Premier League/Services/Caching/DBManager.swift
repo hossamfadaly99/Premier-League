@@ -21,22 +21,14 @@ class DBManager: Cachable {
     let matchSummary = MatchSummary(entity: entity, insertInto: managedContext)
     
     matchSummary.id = Int32(match.id ?? 0)
-    matchSummary.awayTeam = match.awayTeam
-    matchSummary.date = match.date
-    matchSummary.homeTeam = match.homeTeam
-    matchSummary.info = match.info
-    matchSummary.matchDay = match.matchDay
-    matchSummary.status = match.status
-    matchSummary.homeScore = Int32(match.homeScore ?? 0)
-    matchSummary.awayScore = Int32(match.awayScore ?? 0)
 
     try? managedContext.save()
   }
 
-  func removeFavMatches(_ match: MatchModel) {
+  func removeFavMatche(with id: Int32) {
     let fetchRequest: NSFetchRequest<MatchSummary> = MatchSummary.fetchRequest()
 
-        fetchRequest.predicate = NSPredicate(format: "id == %d", Int32(match.id ?? 0))
+        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
 
         do {
             let matches = try managedContext.fetch(fetchRequest)
@@ -56,19 +48,19 @@ class DBManager: Cachable {
 
   }
 
-  func getFavoriteMatches() -> [MatchModel] {
+  func getFavoriteMatches() -> [Int] {
     let request: NSFetchRequest<MatchSummary> = MatchSummary.fetchRequest()
-    var matches: [MatchModel] = []
+    var idList: [Int] = []
     do {
       let results = try managedContext.fetch(request)
-      matches = []
+      idList = []
       for matchSummary in results {
-        matches.append(MatchModel(id: Int(matchSummary.id), status: matchSummary.status, homeTeam: matchSummary.homeTeam, awayTeam: matchSummary.awayTeam, info: matchSummary.info, matchDay: matchSummary.matchDay, date: matchSummary.date, homeScore: Int(matchSummary.homeScore), awayScore: Int(matchSummary.awayScore)))
+        idList.append(Int(matchSummary.id))
       }
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
     }
-    return matches
+    return idList
   }
 
 }

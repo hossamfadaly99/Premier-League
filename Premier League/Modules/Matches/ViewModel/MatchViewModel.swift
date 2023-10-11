@@ -29,27 +29,26 @@ class MatchViewModel {
       getFavMatches { favMatches in
         for (groupIndex, groupedMatch) in self.groupedMatches.enumerated() {
         outerLoop: for (matchIndex, match) in groupedMatch.enumerated() {
-            for favMatch in favMatches {
-              if match.id == favMatch.id {
-                self.groupedMatches[groupIndex][matchIndex].isFav = true
-                continue outerLoop
-              }
+          for favMatch in favMatches {
+            if match.id == Int(favMatch) {
+              self.groupedMatches[groupIndex][matchIndex].isFav = true
+              continue outerLoop
             }
           }
         }
+        }
         self.updateViewController()
       }
-
     }
   }
 
-  func removeFavMatches(match: MatchModel) {
-    dbManager.removeFavMatches(match)
+  func removeFavMatches(with id: Int32) {
+    dbManager.removeFavMatche(with: id)
   }
 
-  func getFavMatches(completion: @escaping ([MatchModel])-> Void) {
-    let favMatches = dbManager.getFavoriteMatches()
-    completion(favMatches)
+  func getFavMatches(completion: @escaping ([Int])-> Void) {
+    let favMatchIDs = dbManager.getFavoriteMatches()
+    completion(favMatchIDs)
   }
 
   func addMatchToFavorites(match: MatchModel) {

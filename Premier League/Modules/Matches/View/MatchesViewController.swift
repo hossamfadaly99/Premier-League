@@ -36,7 +36,7 @@ class MatchesViewController: UIViewController {
 
   private func toggleFavoriteValue(with match: MatchModel) {
     if match.isFav {
-      viewModel.removeFavMatches(match: match)
+      viewModel.removeFavMatches(with: Int32(match.id!))
     } else {
       viewModel.addMatchToFavorites(match: match)
     }
@@ -61,8 +61,8 @@ extension MatchesViewController: UITableViewDataSource {
     let matchCell = tableView.dequeueReusableCell(withIdentifier: "MatchCell") as! MatchCell
     matchCell.updateUI(match: viewModel.groupedMatches[indexPath.section][indexPath.row])
 
-    matchCell.dataHandler = { match in
-      self.toggleFavoriteValue(with: match)
+    matchCell.dataHandler = { id in
+      self.toggleFavoriteValue(with: id)
     }
     return matchCell
   }
