@@ -35,13 +35,22 @@ class MatchesViewController: UIViewController {
 }
 
 extension MatchesViewController: UITableViewDataSource {
+  func numberOfSections(in tableView: UITableView) -> Int {
+    viewModel.groupedMatches.count
+  }
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    viewModel.matches.count
+    viewModel.groupedMatches[section].count
+  }
+
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    viewModel.groupedMatches[section].first?.date
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let matchCell = tableView.dequeueReusableCell(withIdentifier: "MatchCell") as! MatchCell
-    matchCell.updateUI(match: viewModel.matches[indexPath.row])
+    print(indexPath)
+    matchCell.updateUI(match: viewModel.groupedMatches[indexPath.section][indexPath.row])
     return matchCell
   }
 }
