@@ -30,29 +30,9 @@ struct MatchModel {
     } else {
       self.info = Utilities.convertUTCtoHHMM(match.utcDate)
     }
-    self.matchDay = "Matchday #\(match.matchday ?? 0)"
+    self.matchDay = "\(Constants.MATCHDAY)\(match.matchday ?? 0)"
     self.homeTeam = match.homeTeam?.name
     self.awayTeam = match.awayTeam?.name
 
   }
-  init(
-    id: Int?,
-    status: String?,
-    homeTeam: String?,
-    awayTeam: String?,
-    info: String?,
-    matchDay: String?,
-    date: String?,
-    homeScore: Int?,
-    awayScore: Int?) {
-      self.id = id
-      self.status = status
-      self.homeTeam = homeTeam
-      self.awayTeam = awayTeam
-      self.info = info
-      self.matchDay = matchDay
-      self.date = date
-      self.homeScore = homeScore
-      self.awayScore = awayScore
-    }
 }

@@ -20,7 +20,7 @@ class MatchViewModel {
   }
 
   func fetchMatches() {
-    let paramters = [Constants.DATE_FROM: Utilities.getcurrentDate(), Constants.DATE_TO: "2023-10-23"]
+    let paramters = [Constants.DATE_FROM: Utilities.getcurrentDate(), Constants.DATE_TO: Utilities.getNextYearDate()]
 
     networkManager.fetchData(url: "\(Constants.BASE_URL)competitions/2021/matches", param: paramters) { [weak self] (matchResponse: MatchResponse?) in
       guard let self = self, let matchResponse = matchResponse, let matches = matchResponse.matches else { return }
@@ -28,11 +28,11 @@ class MatchViewModel {
       calculateSectionCount(matches)
       getFavMatches { favMatches in
         for (groupIndex, groupedMatch) in self.groupedMatches.enumerated() {
-        outerLoop: for (matchIndex, match) in groupedMatch.enumerated() {
+        midLoop: for (matchIndex, match) in groupedMatch.enumerated() {
           for favMatch in favMatches {
             if match.id == Int(favMatch) {
               self.groupedMatches[groupIndex][matchIndex].isFav = true
-              continue outerLoop
+              continue midLoop
             }
           }
         }
