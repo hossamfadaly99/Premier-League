@@ -9,7 +9,6 @@ import Foundation
 
 class Utilities {
   static func convertUTCtoHHMM(_ utcString: String?) -> String? {
-
     guard let utcString = utcString else { return nil }
 
     let dateFormatter = DateFormatter()
@@ -22,6 +21,22 @@ class Utilities {
 
       let hhmmString = dateFormatter.string(from: date)
       return hhmmString
+    }
+    return nil
+  }
+  static func convertUTCtoYYYYMMDD(_ utcString: String?) -> String? {
+    guard let utcString = utcString else { return nil }
+
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    dateFormatter.timeZone = TimeZone(identifier: "UTC")
+
+    if let date = dateFormatter.date(from: utcString) {
+      dateFormatter.dateFormat = "YYYY-MM-dd"
+      dateFormatter.timeZone = TimeZone(identifier: "Africa/Cairo")
+
+      let ymdString = dateFormatter.string(from: date)
+      return ymdString
     }
     return nil
   }

@@ -35,6 +35,8 @@
 		9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */; };
 		9F30C4162AD6A0D500E8E3D8 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */; };
 		9F30C4182AD6A5DF00E8E3D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */; };
+		9F30C41A2AD6C2AD00E8E3D8 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */; };
+		9F30C41C2AD6C2C200E8E3D8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
 		9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
+		9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +262,8 @@
 		9F30C4072AD5EA5F00E8E3D8 /* Caching */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */,
+				9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */,
 			);
 			path = Caching;
 			sourceTree = "<group>";
@@ -409,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30C41A2AD6C2AD00E8E3D8 /* Cachable.swift in Sources */,
 				9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */,
 				9F30C4102AD5F3E100E8E3D8 /* Constants.swift in Sources */,
 				9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */,
@@ -420,6 +427,7 @@
 				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
 				9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */,
 				9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */,
+				9F30C41C2AD6C2C200E8E3D8 /* DBManager.swift in Sources */,
 				9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */,
 				9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */,
 				9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */,
