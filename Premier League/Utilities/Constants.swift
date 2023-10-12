@@ -31,4 +31,6 @@ class Constants {
   static let CANCEL = "Cancel"
   static let REMOVE = "Remove"
   static let REMOVE_FROM_FAV = "Are you sure you want to remove htis match from favorites?"
+  static let ALL_MATCHES = "All matches"
+  static let FAVORITE_MATCHES = "Favorite matches"
 }

@@ -10,6 +10,7 @@ import UIKit
 class MatchesViewController: UIViewController {
 
   @IBOutlet weak var matchesTableView: UITableView!
+  @IBOutlet weak var titleLabel: UILabel!
   var viewModel: MatchViewModel!
 
   override func viewDidLoad() {
@@ -52,8 +53,10 @@ class MatchesViewController: UIViewController {
   private func configureFilterUI(_ button: UIButton) {
     if viewModel.isFiltered {
       button.setImage(UIImage(systemName: Constants.FILTER_TAPPED_ICON), for: .normal)
+      self.titleLabel.text = Constants.FAVORITE_MATCHES
     } else {
       button.setImage(UIImage(systemName: Constants.FILTER_ICON), for: .normal)
+      self.titleLabel.text = Constants.ALL_MATCHES
     }
   }
   private func animateButton(_ button: UIButton) {

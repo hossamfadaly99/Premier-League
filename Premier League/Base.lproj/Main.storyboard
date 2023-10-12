@@ -50,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="matchesTableView" destination="i4E-Zm-b9j" id="s9c-ga-asC"/>
+                        <outlet property="titleLabel" destination="lJB-yj-ggb" id="VA2-M5-HhT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
