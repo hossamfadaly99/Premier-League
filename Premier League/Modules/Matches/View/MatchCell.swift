@@ -25,14 +25,33 @@ class MatchCell: UITableViewCell {
     matchInfoLabel.text = match.info
     matchdayLabel.text = match.matchDay
     if match.isFav {
-      favButton.backgroundColor = .black
+      self.favButton.setImage(UIImage(systemName: "heart.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
+      self.favButton.tintColor = .red
     } else {
-      favButton.backgroundColor = .white
+        self.favButton.setImage(UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
     self.match = match
   }
 
+  private func animateButton(_ button: UIButton) {
+    UIView.animate(withDuration: 0.3, animations: {
+      button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+
+      button.setImage(UIImage(systemName: "heart.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
+      button.tintColor = .red
+    }) { _ in
+      UIView.animate(withDuration: 0.3) {
+        button.transform = .identity
+      }
+    }
+  }
+
   @IBAction func favButtonTapped(_ sender: UIButton) {
+    if !match.isFav {
+      animateButton(self.favButton)
+    } else {
+      self.favButton.setImage(UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+    }
     dataHandler(match)
   }
 }

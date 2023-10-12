@@ -12,6 +12,8 @@ class MatchViewModel {
   private var networkManager: Networkable
   private var dbManager: Cachable
   var groupedMatches: [[MatchModel]] = []
+  var favMatches: [[MatchModel]] = []
+  var isFiltered: Bool = false
   var updateViewController: () -> () = {}
 
   init(networkManager: Networkable, dbManager: Cachable) {
@@ -37,8 +39,15 @@ class MatchViewModel {
           }
         }
         }
+        self.filterFavoriteMatches()
         self.updateViewController()
       }
+    }
+  }
+
+  func filterFavoriteMatches() {
+    self.favMatches = groupedMatches.map { matches in
+      return matches.filter {$0.isFav == true}
     }
   }
 
