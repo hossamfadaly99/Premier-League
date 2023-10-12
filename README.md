@@ -4,6 +4,8 @@ English Premier League Matches is a sample iOS app that displays a list of footb
 
 
 ![Simulator Screen Recording - iPhone 14 Pro - 2023-10-12 at 16 16 24](https://github.com/hossamfadaly99/Premier-League/assets/74186546/add822ae-e3fe-4214-85e8-c3ccb16fb724)
+![Screenshot 2023-10-12 at 4 45 23 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/fd73524c-f3b1-4183-b3c5-a8f70880243b)
+![Screenshot 2023-10-12 at 4 45 39 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/4eee26f2-7818-473b-9d64-9d03fe6ce490)
 
 
 
