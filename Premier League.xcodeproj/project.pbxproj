@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */; };
 		9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */; };
-		9F30C3B82AD5D39900E8E3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */; };
+		9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */; };
 		9F30C3BB2AD5D39900E8E3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C3B92AD5D39900E8E3D8 /* Main.storyboard */; };
 		9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3BC2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld */; };
 		9F30C3C02AD5D39B00E8E3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */; };
@@ -17,6 +17,26 @@
 		9F30C3CE2AD5D39C00E8E3D8 /* Premier_LeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3CD2AD5D39C00E8E3D8 /* Premier_LeagueTests.swift */; };
 		9F30C3D82AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D72AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift */; };
 		9F30C3DA2AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */; };
+		9F30C3E82AD5D69100E8E3D8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30C3E72AD5D69100E8E3D8 /* Alamofire */; };
+		9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */; };
+		9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3ED2AD5E66700E8E3D8 /* Match.swift */; };
+		9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */; };
+		9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F22AD5E69F00E8E3D8 /* Area.swift */; };
+		9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */; };
+		9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */; };
+		9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */; };
+		9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */; };
+		9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C3FC2AD5E71000E8E3D8 /* Season.swift */; };
+		9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */; };
+		9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */; };
+		9F30C40B2AD5EAFB00E8E3D8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */; };
+		9F30C4102AD5F3E100E8E3D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */; };
+		9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */; };
+		9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */; };
+		9F30C4162AD6A0D500E8E3D8 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */; };
+		9F30C4182AD6A5DF00E8E3D8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */; };
+		9F30C41A2AD6C2AD00E8E3D8 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */; };
+		9F30C41C2AD6C2C200E8E3D8 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +60,7 @@
 		9F30C3B02AD5D39900E8E3D8 /* Premier League.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Premier League.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F30C3BA2AD5D39900E8E3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F30C3BD2AD5D39900E8E3D8 /* Premier_League.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Premier_League.xcdatamodel; sourceTree = "<group>"; };
 		9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +71,25 @@
 		9F30C3D32AD5D39C00E8E3D8 /* Premier LeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Premier LeagueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30C3D72AD5D39C00E8E3D8 /* Premier_LeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_LeagueUITests.swift; sourceTree = "<group>"; };
 		9F30C3D92AD5D39C00E8E3D8 /* Premier_LeagueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premier_LeagueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
+		9F30C3ED2AD5E66700E8E3D8 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competition.swift; sourceTree = "<group>"; };
+		9F30C3F22AD5E69F00E8E3D8 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Odds.swift; sourceTree = "<group>"; };
+		9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTime.swift; sourceTree = "<group>"; };
+		9F30C3FC2AD5E71000E8E3D8 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
+		9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
+		9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
+		9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F30C3E82AD5D69100E8E3D8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,9 +141,12 @@
 		9F30C3B22AD5D39900E8E3D8 /* Premier League */ = {
 			isa = PBXGroup;
 			children = (
+				9F30C40E2AD5F3B700E8E3D8 /* Utilities */,
+				9F30C4052AD5E9F000E8E3D8 /* Services */,
+				9F30C3FE2AD5E7E400E8E3D8 /* Modules */,
+				9F30C3EB2AD5E5B300E8E3D8 /* Models */,
 				9F30C3B32AD5D39900E8E3D8 /* AppDelegate.swift */,
 				9F30C3B52AD5D39900E8E3D8 /* SceneDelegate.swift */,
-				9F30C3B72AD5D39900E8E3D8 /* ViewController.swift */,
 				9F30C3B92AD5D39900E8E3D8 /* Main.storyboard */,
 				9F30C3BF2AD5D39B00E8E3D8 /* Assets.xcassets */,
 				9F30C3C12AD5D39B00E8E3D8 /* LaunchScreen.storyboard */,
@@ -130,6 +173,110 @@
 			path = "Premier LeagueUITests";
 			sourceTree = "<group>";
 		};
+		9F30C3EB2AD5E5B300E8E3D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3EC2AD5E5BA00E8E3D8 /* Match */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9F30C3EC2AD5E5BA00E8E3D8 /* Match */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3E92AD5E0BD00E8E3D8 /* MatchResponse.swift */,
+				9F30C3ED2AD5E66700E8E3D8 /* Match.swift */,
+				9F30C3EF2AD5E68400E8E3D8 /* Competition.swift */,
+				9F30C3F22AD5E69F00E8E3D8 /* Area.swift */,
+				9F30C3F42AD5E6B600E8E3D8 /* Odds.swift */,
+				9F30C3F62AD5E6CC00E8E3D8 /* Referee.swift */,
+				9F30C3F82AD5E6DE00E8E3D8 /* Score.swift */,
+				9F30C3FA2AD5E6FA00E8E3D8 /* ExtraTime.swift */,
+				9F30C3FC2AD5E71000E8E3D8 /* Season.swift */,
+			);
+			path = Match;
+			sourceTree = "<group>";
+		};
+		9F30C3FE2AD5E7E400E8E3D8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3FF2AD5E82E00E8E3D8 /* Matches */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9F30C3FF2AD5E82E00E8E3D8 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4022AD5E87A00E8E3D8 /* ViewModel */,
+				9F30C4012AD5E87500E8E3D8 /* Model */,
+				9F30C4002AD5E85700E8E3D8 /* View */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		9F30C4002AD5E85700E8E3D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C3B72AD5D39900E8E3D8 /* MatchesViewController.swift */,
+				9F30C4112AD5F6A500E8E3D8 /* MatchCell.swift */,
+				9F30C4122AD5F6A500E8E3D8 /* MatchCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F30C4012AD5E87500E8E3D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4032AD5E89600E8E3D8 /* MatchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F30C4022AD5E87A00E8E3D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4152AD6A0D500E8E3D8 /* MatchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9F30C4052AD5E9F000E8E3D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4072AD5EA5F00E8E3D8 /* Caching */,
+				9F30C4062AD5EA5800E8E3D8 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F30C4062AD5EA5800E8E3D8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4082AD5EA7700E8E3D8 /* Networkable.swift */,
+				9F30C40A2AD5EAFB00E8E3D8 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9F30C4072AD5EA5F00E8E3D8 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C4192AD6C2AD00E8E3D8 /* Cachable.swift */,
+				9F30C41B2AD6C2C200E8E3D8 /* DBManager.swift */,
+			);
+			path = Caching;
+			sourceTree = "<group>";
+		};
+		9F30C40E2AD5F3B700E8E3D8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F30C40F2AD5F3E100E8E3D8 /* Constants.swift */,
+				9F30C4172AD6A5DF00E8E3D8 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +293,9 @@
 			dependencies = (
 			);
 			name = "Premier League";
+			packageProductDependencies = (
+				9F30C3E72AD5D69100E8E3D8 /* Alamofire */,
+			);
 			productName = "Premier League";
 			productReference = 9F30C3B02AD5D39900E8E3D8 /* Premier League.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +368,9 @@
 				Base,
 			);
 			mainGroup = 9F30C3A72AD5D39900E8E3D8;
+			packageReferences = (
+				9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9F30C3B12AD5D39900E8E3D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +390,7 @@
 				9F30C3C32AD5D39B00E8E3D8 /* LaunchScreen.storyboard in Resources */,
 				9F30C3C02AD5D39B00E8E3D8 /* Assets.xcassets in Resources */,
 				9F30C3BB2AD5D39900E8E3D8 /* Main.storyboard in Resources */,
+				9F30C4142AD5F6A500E8E3D8 /* MatchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +415,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F30C3B82AD5D39900E8E3D8 /* ViewController.swift in Sources */,
+				9F30C41A2AD6C2AD00E8E3D8 /* Cachable.swift in Sources */,
+				9F30C3F52AD5E6B600E8E3D8 /* Odds.swift in Sources */,
+				9F30C4102AD5F3E100E8E3D8 /* Constants.swift in Sources */,
+				9F30C4042AD5E89600E8E3D8 /* MatchModel.swift in Sources */,
+				9F30C3FB2AD5E6FA00E8E3D8 /* ExtraTime.swift in Sources */,
+				9F30C3F02AD5E68400E8E3D8 /* Competition.swift in Sources */,
+				9F30C40B2AD5EAFB00E8E3D8 /* NetworkManager.swift in Sources */,
+				9F30C3B82AD5D39900E8E3D8 /* MatchesViewController.swift in Sources */,
 				9F30C3BE2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld in Sources */,
+				9F30C3F72AD5E6CC00E8E3D8 /* Referee.swift in Sources */,
+				9F30C4132AD5F6A500E8E3D8 /* MatchCell.swift in Sources */,
 				9F30C3B42AD5D39900E8E3D8 /* AppDelegate.swift in Sources */,
+				9F30C41C2AD6C2C200E8E3D8 /* DBManager.swift in Sources */,
+				9F30C3EA2AD5E0BD00E8E3D8 /* MatchResponse.swift in Sources */,
+				9F30C3FD2AD5E71000E8E3D8 /* Season.swift in Sources */,
+				9F30C3F92AD5E6DE00E8E3D8 /* Score.swift in Sources */,
+				9F30C4162AD6A0D500E8E3D8 /* MatchViewModel.swift in Sources */,
 				9F30C3B62AD5D39900E8E3D8 /* SceneDelegate.swift in Sources */,
+				9F30C3F32AD5E69F00E8E3D8 /* Area.swift in Sources */,
+				9F30C4092AD5EA7700E8E3D8 /* Networkable.swift in Sources */,
+				9F30C4182AD6A5DF00E8E3D8 /* Utilities.swift in Sources */,
+				9F30C3EE2AD5E66700E8E3D8 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +616,8 @@
 				DEVELOPMENT_TEAM = P4S3ZL7HHV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Premier League/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PL;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -472,6 +646,8 @@
 				DEVELOPMENT_TEAM = P4S3ZL7HHV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Premier League/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PL;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -606,6 +782,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9F30C3E72AD5D69100E8E3D8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F30C3E62AD5D69100E8E3D8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9F30C3BC2AD5D39900E8E3D8 /* Premier_League.xcdatamodeld */ = {
