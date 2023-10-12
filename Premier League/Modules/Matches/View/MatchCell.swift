@@ -47,26 +47,8 @@ class MatchCell: UITableViewCell {
     statusBackgroundView.backgroundColor = match.statusBackround
     self.match = match
   }
-
-  private func animateButton(_ button: UIButton) {
-    UIView.animate(withDuration: 0.3, animations: {
-      button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-
-      button.setImage(UIImage(systemName: Constants.HEART_FILLED_ICON)?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
-      button.tintColor = .red
-    }) { _ in
-      UIView.animate(withDuration: 0.3) {
-        button.transform = .identity
-      }
-    }
-  }
-
+  
   @IBAction func favButtonTapped(_ sender: UIButton) {
-    if !match.isFav {
-      animateButton(self.favButton)
-    } else {
-      self.favButton.setImage(UIImage(systemName: Constants.HEART_ICON)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
-    }
     dataHandler(match)
   }
 }

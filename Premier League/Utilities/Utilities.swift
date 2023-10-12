@@ -78,4 +78,15 @@ class Utilities {
     cell.contentView.layer.cornerRadius = 16
   }
 
+
+  static func displayDestructiveAlert(_ viewController: UIViewController, title: String, text: String, completion: @escaping () -> ()) {
+    let redAlert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+    let mainAction = UIAlertAction(title: title, style: .destructive) {_ in
+      completion()
+    }
+    let cancelAction = UIAlertAction(title: Constants.CANCEL, style: .cancel)
+    redAlert.addAction(mainAction)
+    redAlert.addAction(cancelAction)
+    viewController.present(redAlert, animated: true)
+  }
 }

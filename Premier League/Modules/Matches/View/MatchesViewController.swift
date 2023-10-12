@@ -14,7 +14,7 @@ class MatchesViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     setupViewModel()
     setupTableView()
     viewModel.fetchMatches()
@@ -34,13 +34,11 @@ class MatchesViewController: UIViewController {
     self.matchesTableView.dataSource = self
   }
 
-  private func toggleFavoriteValue(with match: MatchModel) {
+  private func toggleFavoriteValue(with match: MatchModel ) {
     if match.isFav {
       viewModel.removeFavMatches(with: Int32(match.id!))
-
     } else {
       viewModel.addMatchToFavorites(match: match)
-      
     }
     viewModel.fetchMatches()
   }
@@ -56,6 +54,18 @@ class MatchesViewController: UIViewController {
       button.setImage(UIImage(systemName: Constants.FILTER_TAPPED_ICON), for: .normal)
     } else {
       button.setImage(UIImage(systemName: Constants.FILTER_ICON), for: .normal)
+    }
+  }
+  private func animateButton(_ button: UIButton) {
+    UIView.animate(withDuration: 0.3, animations: {
+      button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+
+      button.setImage(UIImage(systemName: Constants.HEART_FILLED_ICON)?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
+      button.tintColor = .red
+    }) { _ in
+      UIView.animate(withDuration: 0.3) {
+        button.transform = .identity
+      }
     }
   }
 }
@@ -95,8 +105,16 @@ extension MatchesViewController: UITableViewDataSource {
       matchCell.updateUI(match: viewModel.groupedMatches[indexPath.section][indexPath.row])
     }
 
-    matchCell.dataHandler = { id in
-      self.toggleFavoriteValue(with: id)
+    matchCell.dataHandler = { match in
+      if !match.isFav {
+        self.toggleFavoriteValue(with: match)
+        self.animateButton(matchCell.favButton)
+      } else {
+        Utilities.displayDestructiveAlert(self, title: Constants.REMOVE, text: Constants.REMOVE_FROM_FAV) {
+          self.toggleFavoriteValue(with: match)
+          matchCell.favButton.setImage(UIImage(systemName: Constants.HEART_ICON)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+        }
+      }
     }
     return matchCell
   }
