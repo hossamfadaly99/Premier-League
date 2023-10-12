@@ -19,7 +19,6 @@ class DBManager: Cachable {
 
     let entity = NSEntityDescription.entity(forEntityName: Constants.Fav_Match_ENTITY, in: managedContext)!
     let favoriteMatch = FavoriteMatch(entity: entity, insertInto: managedContext)
-    
     favoriteMatch.id = Int32(match.id ?? 0)
 
     try? managedContext.save()
@@ -27,24 +26,23 @@ class DBManager: Cachable {
 
   func removeFavMatche(with id: Int32) {
     let fetchRequest: NSFetchRequest<FavoriteMatch> = FavoriteMatch.fetchRequest()
+    fetchRequest.predicate = NSPredicate(format: "id == %d", id)
 
-        fetchRequest.predicate = NSPredicate(format: "id == %d", id)
+    do {
+      let matches = try managedContext.fetch(fetchRequest)
+
+      if let matchSummary = matches.first {
+        managedContext.delete(matchSummary)
 
         do {
-            let matches = try managedContext.fetch(fetchRequest)
-
-            if let matchSummary = matches.first {
-                managedContext.delete(matchSummary)
-
-                do {
-                    try managedContext.save()
-                } catch {
-                    print("Error deleting item: \(error)")
-                }
-            }
+          try managedContext.save()
         } catch {
-            print("Error fetching item to delete: \(error)")
+          print("Error deleting item: \(error)")
         }
+      }
+    } catch {
+      print("Error fetching item to delete: \(error)")
+    }
 
   }
 

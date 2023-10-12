@@ -15,8 +15,21 @@ class MatchCell: UITableViewCell {
   @IBOutlet weak var matchdayLabel: UILabel!
   @IBOutlet weak var matchInfoLabel: UILabel!
   @IBOutlet weak var favButton: UIButton!
+  @IBOutlet weak var infoBackgroundView: UIView!
+  @IBOutlet weak var statusBackgroundView: UIView!
+
   var dataHandler: ((MatchModel) -> Void) = {_ in}
   var match: MatchModel!
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    Utilities.makeCellBorderRadius(cell: self)
+  }
+
+  override func layoutSubviews() {
+          super.layoutSubviews()
+    contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 16, bottom: 4, right: 16))
+      }
 
   func updateUI(match: MatchModel) {
     homeTeamLabel.text = match.homeTeam
@@ -25,33 +38,17 @@ class MatchCell: UITableViewCell {
     matchInfoLabel.text = match.info
     matchdayLabel.text = match.matchDay
     if match.isFav {
-      self.favButton.setImage(UIImage(systemName: "heart.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
+      self.favButton.setImage(UIImage(systemName: Constants.HEART_FILLED_ICON)?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
       self.favButton.tintColor = .red
     } else {
-        self.favButton.setImage(UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
+      self.favButton.setImage(UIImage(systemName: Constants.HEART_ICON)?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
     }
+    infoBackgroundView.backgroundColor = match.infoBackround
+    statusBackgroundView.backgroundColor = match.statusBackround
     self.match = match
   }
-
-  private func animateButton(_ button: UIButton) {
-    UIView.animate(withDuration: 0.3, animations: {
-      button.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-
-      button.setImage(UIImage(systemName: "heart.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal), for: .normal)
-      button.tintColor = .red
-    }) { _ in
-      UIView.animate(withDuration: 0.3) {
-        button.transform = .identity
-      }
-    }
-  }
-
+  
   @IBAction func favButtonTapped(_ sender: UIButton) {
-    if !match.isFav {
-      animateButton(self.favButton)
-    } else {
-      self.favButton.setImage(UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .alwaysOriginal), for: .normal)
-    }
     dataHandler(match)
   }
 }
