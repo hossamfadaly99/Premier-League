@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,15 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="502" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="away" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMr-QZ-3Y9">
-                        <rect key="frame" x="317.66666666666669" y="101.66666666666667" width="164.33333333333331" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="away" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMr-QZ-3Y9">
+                        <rect key="frame" x="317.66666666666669" y="102" width="164.33333333333331" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da2-OH-91c">
                         <rect key="frame" x="446" y="168" width="40" height="40"/>
-                        <color key="backgroundColor" red="1" green="0.6150064733036712" blue="0.5360401199321343" alpha="0.50808301508821396" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" secondItem="da2-OH-91c" secondAttribute="width" multiplier="1:1" id="VZq-8k-FQZ"/>
                             <constraint firstAttribute="width" constant="40" id="k5j-uU-ZR0"/>
@@ -38,6 +38,9 @@
                                 <integer key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="favButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Sf-qQ-XPz"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upcoming or fulltime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDw-eW-fqU">
                         <rect key="frame" x="180.66666666666666" y="16" width="140.99999999999997" height="18"/>
@@ -51,14 +54,14 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="score or date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7H-6h-ywf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="score or date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7H-6h-ywf">
                         <rect key="frame" x="200.66666666666666" y="80" width="100.99999999999997" height="64"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2J-Cz-2P9">
-                        <rect key="frame" x="20" y="101.66666666666667" width="164.66666666666666" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2J-Cz-2P9">
+                        <rect key="frame" x="20" y="102" width="164.66666666666666" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -89,6 +92,7 @@
                 <outlet property="homeTeamLabel" destination="V2J-Cz-2P9" id="GxX-nv-Q8A"/>
                 <outlet property="matchInfoLabel" destination="k7H-6h-ywf" id="3T3-Cv-feJ"/>
                 <outlet property="matchStatusLabel" destination="XDw-eW-fqU" id="OUU-83-ass"/>
+                <outlet property="matchdayLabel" destination="8hD-7P-UJe" id="NJy-9u-Cxk"/>
             </connections>
             <point key="canvasLocation" x="268.70229007633588" y="52.112676056338032"/>
         </tableViewCell>
