@@ -17,16 +17,16 @@ class DBManager: Cachable {
 
   func insertMatch(_ match: MatchModel) {
 
-    let entity = NSEntityDescription.entity(forEntityName: "MatchSummary", in: managedContext)!
-    let matchSummary = MatchSummary(entity: entity, insertInto: managedContext)
+    let entity = NSEntityDescription.entity(forEntityName: Constants.Fav_Match_ENTITY, in: managedContext)!
+    let favoriteMatch = FavoriteMatch(entity: entity, insertInto: managedContext)
     
-    matchSummary.id = Int32(match.id ?? 0)
+    favoriteMatch.id = Int32(match.id ?? 0)
 
     try? managedContext.save()
   }
 
   func removeFavMatche(with id: Int32) {
-    let fetchRequest: NSFetchRequest<MatchSummary> = MatchSummary.fetchRequest()
+    let fetchRequest: NSFetchRequest<FavoriteMatch> = FavoriteMatch.fetchRequest()
 
         fetchRequest.predicate = NSPredicate(format: "id == %d", id)
 
@@ -49,7 +49,7 @@ class DBManager: Cachable {
   }
 
   func getFavoriteMatches() -> [Int] {
-    let request: NSFetchRequest<MatchSummary> = MatchSummary.fetchRequest()
+    let request: NSFetchRequest<FavoriteMatch> = FavoriteMatch.fetchRequest()
     var idList: [Int] = []
     do {
       let results = try managedContext.fetch(request)

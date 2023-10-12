@@ -13,5 +13,6 @@ class Constants {
   static let BASE_URL = "https://api.football-data.org/v2/"
   static let DATE_FROM = "dateFrom"
   static let DATE_TO = "dateTo"
-
+  static let Fav_Match_ENTITY = "FavoriteMatch"
+  static let MATCHDAY = "Matchday #"
 }
