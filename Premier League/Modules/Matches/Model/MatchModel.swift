@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct MatchModel {
   let id: Int?
@@ -18,6 +19,8 @@ struct MatchModel {
   let homeScore: Int?
   let awayScore: Int?
   var isFav: Bool = false
+  var infoBackround: UIColor?
+  var statusBackround: UIColor?
 
   init(match: Match) {
     self.id = match.id
@@ -33,6 +36,12 @@ struct MatchModel {
     self.matchDay = "\(Constants.MATCHDAY)\(match.matchday ?? 0)"
     self.homeTeam = match.homeTeam?.name
     self.awayTeam = match.awayTeam?.name
-
+    if match.status == .finished {
+      statusBackround = UIColor(named: Constants.ANCHOR_COLOR)
+      infoBackround = UIColor(named: Constants.ORANGE_COLOR)
+    } else {
+      statusBackround = UIColor(named: Constants.COIN_COLOR)
+      infoBackround = UIColor(named: Constants.LIGHT_GREEN_COLOR)
+    }
   }
 }

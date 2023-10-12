@@ -29,8 +29,8 @@ class MatchesViewController: UIViewController {
   }
 
   private func setupTableView() {
-    let matchCell = UINib(nibName: "MatchCell", bundle: nil)
-    self.matchesTableView.register(matchCell, forCellReuseIdentifier: "MatchCell")
+    let matchCell = UINib(nibName: Constants.MATCH_CELL, bundle: nil)
+    self.matchesTableView.register(matchCell, forCellReuseIdentifier: Constants.MATCH_CELL)
     self.matchesTableView.dataSource = self
   }
 
@@ -53,9 +53,9 @@ class MatchesViewController: UIViewController {
 
   private func configureFilterUI(_ button: UIButton) {
     if viewModel.isFiltered {
-      button.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle.fill"), for: .normal)
+      button.setImage(UIImage(systemName: Constants.FILTER_TAPPED_ICON), for: .normal)
     } else {
-      button.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle"), for: .normal)
+      button.setImage(UIImage(systemName: Constants.FILTER_ICON), for: .normal)
     }
   }
 }
@@ -87,7 +87,7 @@ extension MatchesViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let matchCell = tableView.dequeueReusableCell(withIdentifier: "MatchCell") as! MatchCell
+    let matchCell = tableView.dequeueReusableCell(withIdentifier: Constants.MATCH_CELL) as! MatchCell
 
     if viewModel.isFiltered {
       matchCell.updateUI(match: viewModel.favMatches[indexPath.section][indexPath.row])
