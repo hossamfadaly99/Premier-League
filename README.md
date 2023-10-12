@@ -2,10 +2,10 @@
 
 English Premier League Matches is a sample iOS app that displays a list of football matches from the English Premier League. The app allows users to view match informations, add matches to their favorites, and filter matches to view only their favorites.
 
+![Simulator Screen Recording - iPhone 14 Pro - 2023-10-12 at 17 02 54](https://github.com/hossamfadaly99/Premier-League/assets/74186546/597a47d6-94a2-4131-86bc-ef1d199d32af)
+![Screenshot 2023-10-12 at 5 03 14 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/5726e2d0-ecd3-4887-84c7-f1046fcce1c8)
+![Screenshot 2023-10-12 at 5 03 21 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/7776abf1-3bb1-4cc7-9b39-17116a198223)
 
-![Simulator Screen Recording - iPhone 14 Pro - 2023-10-12 at 16 16 24](https://github.com/hossamfadaly99/Premier-League/assets/74186546/add822ae-e3fe-4214-85e8-c3ccb16fb724)
-![Screenshot 2023-10-12 at 4 45 23 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/fd73524c-f3b1-4183-b3c5-a8f70880243b)
-![Screenshot 2023-10-12 at 4 45 39 PM](https://github.com/hossamfadaly99/Premier-League/assets/74186546/4eee26f2-7818-473b-9d64-9d03fe6ce490)
 
 
 
